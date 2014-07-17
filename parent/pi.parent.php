@@ -19,6 +19,24 @@ class Plugin_parent extends Plugin
 	}
 
 	/**
+	 * Retrieve any var from the parent page's YAML
+	 * @return String Variable from the parent page
+	 */
+	public function index()
+	{
+		$page = $this->getParent();
+		$var = $this->fetchParam('var', false, null, false, false);
+		
+		// Exit if no $src
+        	if (!$var)
+        	{
+            		return NULL;
+        	}
+		
+		return count($page) == 0 ? null: $page[$var];
+	}
+
+	/**
 	 * Retrieve the title of the parent page
 	 * @return String Title of the parent page
 	 */
