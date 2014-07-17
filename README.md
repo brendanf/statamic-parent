@@ -8,7 +8,7 @@ All of the following tags return NULL if the page does not have a parent (i.e. t
 
  - `{{ parent:title }}` - Retrieve the title of the parent page
  - `{{ parent:url }}` - Retrieve the URL of the parent page
-
+ - `{{ parent var="somevarname" }}` - Retrieve any var defined in YAML on the parent page
 ## License
 
 Licensed under the MIT License.
