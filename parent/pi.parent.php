@@ -27,7 +27,7 @@ class Plugin_parent extends Plugin
 		$page = $this->getParent();
 		$var = $this->fetchParam('var', false, null, false, false);
 		
-		// Exit if no $src
+		// Exit if no $var
         	if (!$var)
         	{
             		return NULL;
